@@ -12,8 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Debug
-        run: ls -R
+      - name: Debug files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files:"
+          ls -R
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -22,4 +26,4 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan
-        run: terraform plan -out=plan.tf
+        run: terraform plan
