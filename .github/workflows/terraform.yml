@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./terraform   # 🔁 change if your TF code is elsewhere
+        working-directory: .   # 🔁 change if your TF code is elsewhere
 
     steps:
       - name: Checkout code
